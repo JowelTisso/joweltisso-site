@@ -8,6 +8,11 @@
 
 body {
   font-family: "Open Sans", sans-serif;
+  margin: 0px;
+}
+
+hr {
+  margin: 2rem 0rem;
 }
 
 /* Container */
@@ -22,6 +27,7 @@ body {
 
 /* Link */
 .link {
+  box-sizing: border-box;
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
@@ -30,16 +36,18 @@ body {
   background-color: var(--primary-color);
   border-radius: 0.5rem;
   color: white;
+  max-width: 150px;
+  display: block;
+  margin: 1rem 1rem 1rem 0rem;
 }
 
 .link-secondary {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
   border-radius: 0.5rem;
-}
-
-hr {
-  margin: 2rem 0rem;
+  max-width: 150px;
+  display: block;
+  margin: 1rem 1rem 1rem 0rem;
 }
 
 /* List */
@@ -113,9 +121,14 @@ hr {
 .footer {
   background-color: var(--primary-color);
   color: white;
-  padding: 1rem 1rem;
+  padding: 4rem 1rem;
   border-top-right-radius: 1rem;
   text-align: center;
+}
+
+.footer-header {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .social-links .link {
