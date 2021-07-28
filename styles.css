@@ -89,7 +89,6 @@ hr {
 
 .hero {
   padding: 2rem;
-  /* background-color: #6b7280; */
 }
 
 .hero .hero-img {
@@ -125,10 +124,6 @@ hr {
 
 .section {
   padding: 2rem;
-}
-
-.section h1 {
-  text-align: center;
 }
 
 .ow {
