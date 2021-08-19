@@ -1,9 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 :root {
   --primary-color: #6c63ff;
-  --drak-gray: #6b7280;
+  --dark-gray: #6b7280;
   --off-white: #f3f4f6;
+  --dark-gray-2: #374151;
+  --color-code-1: #39a2ae;
+  --color-code-2: #ec4899;
+  --color-code-3: #10b981;
 }
 
 body {
@@ -35,6 +44,23 @@ hr {
   color: white;
   margin: 1rem;
   display: inline-block;
+}
+
+.container-text-image {
+  background-color: var(--dark-gray-2);
+  max-width: 550px;
+  min-height: 200px;
+  display: flex;
+  margin: auto;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+.container-code-snippet {
+  min-height: 100px;
 }
 
 /* Link */
@@ -112,11 +138,11 @@ hr {
 
 .hero .hero-heading {
   text-align: center;
-  color: var(--drak-gray);
+  color: var(--dark-gray);
 }
 
 .hero .blog-heading {
-  color: var(--drak-gray);
+  color: var(--dark-gray);
   font-weight: normal;
   margin-bottom: 0;
   /* background-color: #6b7280; */
@@ -132,10 +158,22 @@ hr {
   max-width: 600px;
 }
 
+.blog-hero-img {
+  max-width: 650px;
+  display: block;
+  margin: auto;
+  /* padding-top: 5rem; */
+  border-radius: 7px;
+}
+
 /* Section */
 
 .section {
   padding: 2rem;
+}
+
+.section-blog {
+  padding: 1rem;
 }
 
 .ow {
@@ -163,4 +201,39 @@ hr {
 
 .footer ul {
   padding-inline-start: 0px;
+}
+
+/* text */
+.text-image {
+  font-family: "Style Script", cursive;
+  color: var(--off-white);
+  font-size: 4rem;
+  margin: 0rem 1rem;
+}
+.text-color1 {
+  color: var(--color-code-1);
+}
+.text-color2 {
+  color: var(--color-code-2);
+}
+.text-color3 {
+  color: var(--color-code-3);
+}
+
+.code-img {
+  /* max-width: 350px; */
+  display: block;
+  margin: auto;
+  padding-top: 5rem;
+  height: 200px;
+}
+
+pre {
+  background-color: var(--dark-gray-2);
+  border-radius: 10px;
+}
+
+pre code {
+  color: var(--off-white);
+  font-size: 16px;
 }
