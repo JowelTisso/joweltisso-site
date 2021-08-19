@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles.css" />
-    <title>Document</title>
+    <title>Var, let & const</title>
   </head>
-  <body>
+  <body style="font-family: 'Nunito Sans', sans-serif; font-size: 20px">
     <nav class="navigation container">
       <div class="nav-brand">IAMDEVELOPER</div>
       <ul class="list-non-bullet nav-pills">
@@ -24,45 +24,339 @@
     </nav>
 
     <header class="hero">
-      <h1 class="blog-heading">Blog title</h1>
-      <small class="blog-date">July, 2021</small>
-      <img class="hero-img" src="/image/hero.svg" alt="" />
+      <h1 class="blog-heading">Var, let & const</h1>
+      <small class="blog-date">Aug, 2021</small>
+      <div class="container-text-image">
+        <small class="text-image text-color1">Var,</small>
+        <small class="text-image text-color2">let &</small>
+        <small class="text-image text-color3">const</small>
+      </div>
     </header>
 
-    <section class="section">
+    <section class="section-blog">
       <div class="container container-center">
-        <h1>White section</h1>
+        <h1>So, what is var, let & const</h1>
+        <p>These are the keywords used to declare variables in javascript.</p>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          Declaring variables is one of the most important and repetitive thing
+          you will be doing in programming.
+        </p>
+
+        <pre>
+           <code>
+    var message = "Hello world!";
+           </code>
+         </pre>
+        <p>Here, "message" is the variable created using the var keyword.</p>
+        <p>Similarlly, let and const is also used in the same manner.</p>
+      </div>
+    </section>
+
+    <section class="section-blog">
+      <div class="container container-center">
+        <h1>Who is older?</h1>
+        <p>
+          <strong>Var</strong> is definitely the older one. Let and const was
+          later introduced in ES6(2015) version of javascript, keeping some
+          drawback of var in mind.
         </p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section-blog">
       <div class="container container-center">
-        <h1>White section</h1>
+        <h1>What kind of difference do they have?</h1>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+          They have difference in <strong>scope</strong>,
+          <strong>re-declaration</strong> and <strong>hoisting</strong>. In
+          simple words, the accessibilty of variables (scope), the ability to
+          manipulate the variables (re-declaration / update) and the mechanism
+          of moving variable to the top before code execution (hoisting).
         </p>
       </div>
     </section>
 
+    <section class="section-blog">
+      <div class="container container-center">
+        <h1>So, lets dive into the difference now!</h1>
+        <p>
+          <strong>Scope : </strong>
+          Scope is basically a location from where a variable can be accessed or
+          used.
+        </p>
+        <p>
+          <strong>Types of scope : </strong>
+          (a) Global scope (b) Function scope (c) Block scope
+        </p>
+        <p>
+          <strong>Var :</strong>
+          <br />
+          Var is globally scoped or function scope. Which means if a variable is
+          declared outside of a function then it is globally scoped i.e it can
+          be accessed globally or it can be accessed from any portion of the
+          code.
+        </p>
+        <pre>
+          <code>
+    var message = "Hello";
+
+    function showMessage(){
+
+      console.log(message); //output "Hello"
+
+      //The message variable can be used here
+    }
+
+      console.log(message); //output "Hello"
+
+      //The message variable can be used here
+          </code>
+        </pre>
+        <p>
+          And if a variable is declared inside a function then it can only be
+          accessed within that function.
+        </p>
+        <pre>
+          <code>
+    function showMessage(){
+
+      var message = "Hello";
+
+      console.log(message); //output "Hello"
+
+      //The message variable can be used here
+    }
+
+      console.log(message); //output "message is not defined"
+
+      //The message variable cannot be used here
+          </code>
+        </pre>
+        <p>
+          <strong>Let & const :</strong>
+          <br />
+          Let & const variable is block scoped. Block means the area of code
+          which is wrapped with curly braces {} is called block.
+        </p>
+        <pre>
+          <code>
+      function blockFunc(){
+
+        //This is a block area
+
+      }
+
+      if(condition){
+
+        //This is a block area
+
+      }
+          </code>
+        </pre>
+        <p>
+          So, let & const variables which is declared inside a block can be
+          accessed only within that block
+        </p>
+        <pre>
+          <code>
+      if(condition){
+
+        let message = "Hello";
+
+        const greeting = "Welcome";
+        
+        //message variable can be used here
+
+        //greeting variable can be used here
+      }     
+      
+        //message variable cannot be used here
+
+        //greeting variable cannot be used here
+          </code>
+        </pre>
+        <p>
+          <strong>Re-declaration or update : </strong>
+          Here we are going to see the ability to re-declare or update the value
+          of a variables
+        </p>
+        <p>
+          <strong>Var :</strong>
+          <br />
+          Var can be re-declared and updated.Which means we can re-declare a
+          variable with new value or update the value of a variable.
+        </p>
+        <pre>
+          <code>
+      //re-declaration
+
+      var message = "Hello";
+
+      var message = "Welcome";
+
+      console.log(message); // output "Welcome"
+
+      //update
+      
+      var message = "Hello";
+
+      message = "Welcome";
+
+      console.log(message); // output "Welcome"
+          </code>
+        </pre>
+        <p>
+          <strong>Let :</strong>
+          <br />
+          Let cannot be re-declared but it can be updated.Which means we can
+          update the value of a let variable. If we try to re-declare the
+          variable then it will give us an error.
+        </p>
+        <pre>
+          <code>
+      //re-declaration
+
+      let message = "Hello";
+
+      let message = "Welcome";
+
+      console.log(message); // output "message has already been
+      declared"
+
+      //update
+      
+      let message = "Hello";
+
+      message = "Welcome";
+
+      console.log(message); // output "Welcome"
+          </code>
+        </pre>
+        <p>
+          <strong>Const :</strong>
+          <br />
+          Const can neither be re-declared or updated. Its value remains
+          constant. So, it is necessary to assign a value when declaring a const
+          variable.
+        </p>
+        <pre>
+          <code>
+      //re-declaration
+
+      const message = "Hello";
+
+      const message = "Welcome";
+
+      console.log(message); // output "message has already been
+      declared"
+
+      //update
+      
+      const message = "Hello";
+
+      message = "Welcome";
+
+      console.log(message); // output "Assignment to constant 
+      variable"
+          </code>
+        </pre>
+        <p>
+          <strong>Hoisting : </strong>
+          It is a process of moving all the variable declarations to the top of
+          a scope before code execution.
+        </p>
+        <p>
+          <strong>Var :</strong>
+          <br />
+          Var is hoisted to the top of its scope and initialized as undefined.
+        </p>
+        <pre>
+          <code>
+
+      console.log(message); // output "undefined"
+
+      var message = "Hello";
+
+          </code>
+        </pre>
+        <p>
+          Technically, a variable should not be able to access before
+          declaration but due to hoisting this is possible
+        </p>
+
+        <pre>
+          <code>
+      // Under the hood the above code works as
+
+      var message = undefined; // This line is written due to 
+
+      hoisting
+
+      console.log(message); // output "undefined"
+
+      var message = 'Hello';
+          </code>
+        </pre>
+        <p>
+          <strong>Let :</strong>
+          <br />
+          Let is hoisted to the top of its scope like var but it is not
+          initialized.
+        </p>
+        <pre>
+          <code>
+      // So, if you do this it will give you an error.
+
+      console.log(message); // output "Cannot access 'message' 
+
+      before initialization"
+
+      let message = "Hello"; 
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+      //Under the hood of the above code.
+
+      let message; // This line is written due to 
+
+      hoisting
+
+      console.log(message); // output "Cannot access 'message' 
+
+      before initialization"
+
+      let message = "Hello"; 
+
+          </code>
+        </pre>
+        <p>
+          <strong>Const :</strong>
+          <br />
+          Const variables are hoisted to top as well but not initialized, just
+          like let. So, it gives the same error as let if you try to access a
+          variable before declaration and initialization.
+        </p>
+        <pre>
+          <code>
+      // So, if you do this it will give you an error.
+
+      console.log(message); // output "Cannot access 'message' 
+
+      before initialization"
+
+      const message = "Hello"; 
+          </code>
+        </pre>
+
+        <p>
+          So, finally these were the differences between an old var and the new
+          let & const.Hopefully it has given you an insight in what they really
+          are.
+        </p>
+      </div>
+    </section>
     <footer class="footer">
       <div class="footer-header">Social media presence</div>
       <ul class="social-links list-non-bullet">
