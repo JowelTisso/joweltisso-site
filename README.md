@@ -1,4 +1,3 @@
-# This is my portfolio for neogcamp
+# This is my portfolio for neogcamp levelzero
 
-I am practicing git and hosting in this assignment...
-Currently looking forward to learn React...
+> Here There are all the projects and blogs required to qualify for levelone interview
